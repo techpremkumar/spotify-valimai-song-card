@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Spotify Song Card</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./Assets/style.css" />
+  </head>
+  <body>
+    <div class="Card">
+      <div class="Image">
+        <img
+          src="./Assets/ajith.jpg"
+          id="img"
+          alt="image"
+          width="300"
+          height="300"
+        />
+      </div>
+      <div class="Content">
+        <div class="Icon">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="20"
+            height="20"
+            fill="currentColor"
+            class="bi bi-spotify"
+            viewBox="0 0 16 16"
+            style="color: white; width: 25px; height: 25px"
+          >
+            <path
+              d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0zm3.669 11.538a.498.498 0 0 1-.686.165c-1.879-1.147-4.243-1.407-7.028-.77a.499.499 0 0 1-.222-.973c3.048-.696 5.662-.397 7.77.892a.5.5 0 0 1 .166.686zm.979-2.178a.624.624 0 0 1-.858.205c-2.15-1.321-5.428-1.704-7.972-.932a.625.625 0 0 1-.362-1.194c2.905-.881 6.517-.454 8.986 1.063a.624.624 0 0 1 .206.858zm.084-2.268C10.154 5.56 5.9 5.419 3.438 6.166a.748.748 0 1 1-.434-1.432c2.825-.857 7.523-.692 10.492 1.07a.747.747 0 1 1-.764 1.288z"
+            />
+          </svg>
+        </div>
+        <div class="Track">
+          <p class="scrolling-text">Naanga-vera-Maari(From "Valimai")</p>
+        </div>
+        <div class="Singer">
+          <p class="scrolling-text">
+            Anuraj kulkarni and Yuvan shankar raja(From Valimai)
+          </p>
+        </div>
+        <div class="Audio">
+          <audio src="./Assets/Naanga-Vera-Maari-MassTamilan.fm.mp3" controls></audio>
+        </div>
+        <div class="Heart"></div>
+      </div>
+    </div>
+  </body>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var hearts = document.querySelectorAll(".Heart");
+
+      for (var i = 0; i < hearts.length; i++) {
+        hearts[i].addEventListener("click", function () {
+          this.classList.toggle("is-active");
+        });
+      }
+    });
+  </script>
+</html>
